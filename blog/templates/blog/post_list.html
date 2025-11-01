@@ -7,6 +7,9 @@
                 {{ post.published_date }}
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <!-- blog image -->
+            <img src="{{ post.image.url }}" class="blog-image-list" alt="{{post.title}}">
         </div>
     {% endfor %}
 {% endblock %}
